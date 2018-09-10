@@ -101,7 +101,7 @@ os.system('defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -boo
 os.system('open -a "Google Chrome" --args --make-default-browser')
 
 # Clean Up
-os.system('brew cleanup && brew cask cleanup')
+os.system('brew cleanup')
 
 # Mute startup sound
 show_notification("We need your password")
