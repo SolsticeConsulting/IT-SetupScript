@@ -76,6 +76,9 @@ print "Installing Essential Apps"
 os.system('brew cask install spectacle the-unarchiver')
 os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync')
 
+print "Installing Fonts"
+os.system('brew cask install font-dosis font-droid-sans-mono-for-powerline font-open-sans font-open-sans-condensed font-roboto font-roboto-mono font-roboto-condensed font-roboto-slab font-consolas-for-powerline font-dejavu-sans font-dejavu-sans-mono-for-powerline font-inconsolata font-inconsolata-for-powerline font-lato font-menlo-for-powerline font-meslo-lg font-meslo-for-powerline font-noto-sans font-noto-serif font-source-sans-pro font-source-serif-pro font-ubuntu font-pt-mono font-pt-sans font-pt-serif font-geomanist font-fira-mono font-fira-mono-for-powerline font-fira-code font-fira-sans font-source-code-pro')
+
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
