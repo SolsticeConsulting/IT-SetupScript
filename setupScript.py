@@ -8,6 +8,7 @@ import subprocess
 
 name = ''
 email = ''
+assettag = ''
 
 
 # Check if Xcode Command Line Tools are installed
@@ -25,10 +26,14 @@ print "\n\nWelcome to the Mac Setup Script by Solstice\n"
 
 # Basic Info
 while name == '':
-  name = raw_input("What's your name and surname?\n").strip()
+  name = raw_input("What's your name?\n").strip()
 
 while email == '' or '@' not in email:
   email = raw_input("What's your email?\n").strip()
+  
+while assettag == '':
+   assettag = raw_input("What's this mac asset-tag?\n").strip()
+
 
 
 def show_notification(text):
@@ -43,10 +48,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName "%s"' % name)
-os.system('sudo scutil --set HostName "%s"' % name)
-os.system('sudo scutil --set LocalHostName "%s"' % name.replace(' ', '-')) # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s"' % name)
+os.system('sudo scutil --set ComputerName "%s-%s"' % assettag % name)
+os.system('sudo scutil --set HostName "%s-%s"' % assettag % name)
+os.system('sudo scutil --set LocalHostName "%s-%s"'% assettag % name.replace(' ', '-')) # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s-%s"' % assettag % name)
 
 
 # Install Brew & Brew Cask
