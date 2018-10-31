@@ -50,7 +50,7 @@ print "*************************************"
 # Set computer name info (as done via System Preferences → Sharing)
 os.system('sudo scutil --set ComputerName "%s-%s"' %(assetag, name))
 os.system('sudo scutil --set HostName "%s-%s"' %(assetag, name))
-os.system('sudo scutil --set LocalHostName "%s-%s"'%(assetag, name).replace(' ', '-')) # Doesn't support spaces
+os.system('sudo scutil --set LocalHostName "%s-%s"'%(assetag, name.replace(' ', '-'))) # Doesn't support spaces
 os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s-%s"' %(assetag, name))
 
 
