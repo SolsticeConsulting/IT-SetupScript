@@ -32,7 +32,7 @@ while email == '' or '@' not in email:
   email = raw_input("What's your email?\n").strip()
   
 while assetag == '':
-   assettag = raw_input("What's this mac asset-tag?\n").strip()
+   assetag = raw_input("What's this mac asset-tag?\n").strip()
 
 
 
