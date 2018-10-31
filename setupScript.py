@@ -31,7 +31,7 @@ while name == '':
 while email == '' or '@' not in email:
   email = raw_input("What's your email?\n").strip()
   
-while assettag == '':
+while assetag == '':
    assettag = raw_input("What's this mac asset-tag?\n").strip()
 
 
@@ -48,10 +48,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName "%s-%s"' % assettag % name)
-os.system('sudo scutil --set HostName "%s-%s"' % assettag % name)
-os.system('sudo scutil --set LocalHostName "%s-%s"'% assettag % name.replace(' ', '-')) # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s-%s"' % assettag % name)
+os.system('sudo scutil --set ComputerName "%s-%d"' %(assetag, name))
+os.system('sudo scutil --set HostName "%s-%d"' %(assetag, name))
+os.system('sudo scutil --set LocalHostName "%s-%d"'%(assetag, name).replace(' ', '-')) # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s-%s"' %(assetag, name))
 
 
 # Install Brew & Brew Cask
