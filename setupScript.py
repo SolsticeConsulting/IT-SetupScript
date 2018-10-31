@@ -8,7 +8,7 @@ import subprocess
 
 name = ''
 email = ''
-assettag = ''
+assetag = ''
 
 
 # Check if Xcode Command Line Tools are installed
