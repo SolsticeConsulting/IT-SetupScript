@@ -76,6 +76,10 @@ os.system('mas upgrade')  # Update all appstore apps
 print "Installing Quicklook Helpers"
 os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json webpquicklook suspicious-package epubquicklook qlstephen qlprettypatch font-hack qlvideo')
 
+#Installing DockUtil to modify mac dock
+print "Installing Dock Util"
+os.system('brew install dockutil')
+
 # Installing third party apps
 print "Installing Essential Apps"
 os.system('brew cask install spectacle the-unarchiver')
