@@ -104,6 +104,26 @@ os.system('defaults write com.apple.dock mru-spaces -bool false')
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 os.system('defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true')
 
+#Re-ordering mac Dock
+print "Modifying the dock"
+#!/bin/bash
+os.system('/usr/local/bin/dockutil --remove "Safari" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Launchpad" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Siri" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "News" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Contacts" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Reminders" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Photos" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Messages" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "FaceTime" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "iTunes" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "iBooks" --allhomes')
+os.system('/usr/local/bin/dockutil --remove "Maps" --allhomes')
+os.system('/usr/local/bin/dockutil --add "/applications/Google Chrome.app" --position 1 --allhomes')
+os.system('/usr/local/bin/dockutil --add "/applications/Slack.app" --position 2 --allhomes')
+os.system('/usr/local/bin/dockutil --add "/applications/Zoom.app" --position 3 --allhomes')
+os.system('/usr/local/bin/dockutil --move "App Store" --position 4 --allhomes')
+
 
 # Make Google Chrome the default browser
 os.system('open -a "Google Chrome" --args --make-default-browser')
