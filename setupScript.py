@@ -125,7 +125,7 @@ os.system('/usr/local/bin/dockutil --remove "iBooks" --allhomes')
 os.system('/usr/local/bin/dockutil --remove "Maps" --allhomes')
 os.system('/usr/local/bin/dockutil --add "/applications/Google Chrome.app" --position 1 --allhomes')
 os.system('/usr/local/bin/dockutil --add "/applications/Slack.app" --position 2 --allhomes')
-os.system('/usr/local/bin/dockutil --add "/applications/Zoom.app" --position 3 --allhomes')
+os.system('/usr/local/bin/dockutil --add "/applications/zoom.us.app" --position 3 --allhomes')
 os.system('/usr/local/bin/dockutil --move "App Store" --position 4 --allhomes')
 
 
