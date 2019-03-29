@@ -97,7 +97,7 @@ while role == '':
 
 if role =='dev':
   print "Installing Dev Essential Apps"
-  os.system('brew cask install spectacle the-unarchiver atom subime-text')
+  os.system('brew cask install spectacle the-unarchiver atom sublime-text')
   os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync java android-studio postman zeplin')
 
 elif role =='ux':
@@ -107,7 +107,7 @@ elif role =='ux':
 
 elif role =='qa':
   print "Installing UX Essential Apps"
-  os.system('brew cask install spectacle the-unarchiver atom subime-text')
+  os.system('brew cask install spectacle the-unarchiver atom sublime-text')
   os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync charles postman')
 
 else:
